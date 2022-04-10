@@ -14,7 +14,7 @@ public class Main {
                 {"0", "2", "7", "3"},
                 {"0", "2", "7", "3"}
         };
-        String[][] wrongChar = {
+        String[][] wrongCharMatrix = {
                 {"3", "2", "3", "3"},
                 {"6", "1", "", "3"},
                 {"0", "2", "7", "3"},
@@ -24,7 +24,7 @@ public class Main {
         try {
             System.out.println(Converter.strConverter(correctMatrix));
         } catch (CustomException e) {
-            e.getMessage();
+            System.err.println(e.getMessage());
         }
 
 
@@ -35,7 +35,7 @@ public class Main {
         }
 
         try {
-            System.out.println(Converter.strConverter(wrongChar));
+            System.out.println(Converter.strConverter(wrongCharMatrix));
         } catch (CustomException e) {
             System.err.println(e.getMessage());
         }
